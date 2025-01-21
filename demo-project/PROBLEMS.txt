@@ -1,0 +1,14 @@
+2025-01-21
+==========
+
+Curiously, you can't name the mongo DB container any name you like, it *has* to be "mongo".
+
+This is reported (but not explained) here:
+
+        https://www.reddit.com/r/docker/comments/1abcypf/mongoexpress_connecting_to_mongo27017_rather_than/
+
+Another issue was this:
+
+        https://github.com/mongo-express/mongo-express-docker/issues/67
+
+
