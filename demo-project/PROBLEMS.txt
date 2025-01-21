@@ -7,8 +7,12 @@ This is reported (but not explained) here:
 
         https://www.reddit.com/r/docker/comments/1abcypf/mongoexpress_connecting_to_mongo27017_rather_than/
 
-Another issue was this:
+Another two issues were resolved after reading this:
 
         https://github.com/mongo-express/mongo-express-docker/issues/67
+
+Specifically, I had to supply ME_CONFIG_MONGODB_URL in lieu of ME_CONFIG_MONGO_DB_SERVER and also set ME_CONFIG_BASICAUTH to false.
+
+        
 
 
