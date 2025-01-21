@@ -1,0 +1,22 @@
+# docker compose configuration blueprint
+
+version: '3'     # version of docker-compose
+services:
+  mongo:        # container name
+    image: mongo
+    ports:
+      - 27017:27017                   # host:container
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=mongadmin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_URL=mongodb://mongoadmin:password@mongo:27017/
+      - ME_CONFIG_BASICAUTH=false
+
+# Docker Compose takes care of creating a common network for these containers
