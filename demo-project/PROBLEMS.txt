@@ -11,8 +11,11 @@ Another two issues were resolved after reading this:
 
         https://github.com/mongo-express/mongo-express-docker/issues/67
 
-Specifically, I had to supply ME_CONFIG_MONGODB_URL in lieu of ME_CONFIG_MONGO_DB_SERVER and also set ME_CONFIG_BASICAUTH to false.
+Specifically, I had to supply ME_CONFIG_MONGODB_URL in lieu of ME_CONFIG_MONGO_DB_SERVER and also set ME_CONFIG_BASICAUTH to [false].
 
-        
+Not setting ME_CONFIG_BASICAUTH to [false] also works; just use [docker logs mongo-express] to see what the default passwords
+are (they are reported in a log message, you can't miss them).
+
+
 
 
