@@ -1,1 +1,6 @@
-docker-compose -f mongo.yaml up
+The tutorial gives the following incantation:
+
+        docker-compose -f mongo.yaml up
+
+You can also use the 'start' command in lieu of 'up'
+
