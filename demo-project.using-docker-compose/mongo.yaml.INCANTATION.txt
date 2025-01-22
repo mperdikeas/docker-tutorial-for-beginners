@@ -1,6 +1,11 @@
-The tutorial gives the following incantation:
+The 4 year old tutorial gives the following incantation:
 
-        docker-compose -f mongo.yaml up
+    docker-compose -f mongo.yaml up
 
-You can also use the 'start' command in lieu of 'up'
+But I am instead using the following:
+
+    docker compose -f mongo.yaml up --detach
+
+Notice that as of January 2025 there's no need to separately install [docker-compose].
+
 
